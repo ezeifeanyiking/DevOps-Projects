@@ -31,6 +31,7 @@ pwd [option]
 It has two (2) acceptable options:
 - -L: Display the logical current working directory (default behavior).
 - -P: Display the physical current working directory (the location of the current directory in the file system, which might differ from the logical directory due to symbolic links).
+
 ![pwd-command](images/pwd-command.png)
 
 ## CD COMMAND
