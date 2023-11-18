@@ -7,19 +7,20 @@
 The general syntax:
 
 ```Bash
-sudo (command e.g: brew install WhatsApp)
+sudo (command e.g: apt upgrade)
 ```
 
 It becomes:
 
 ```Bash
-sudo brew install WhatsApp
+sudo apt upgrade
 ```
 
 This command is used to upgrade the installed packages on your system to their latest versions.
 
 - When using `sudo`, the system will prompt users to authenticate themselves with a password.  
-  ![image](images/image-requesting-password.png)
+
+![image](images/image-requesting-password.png)
 
 ## PWD COMMAND
 `pwd` short for `print working directory`, displays the name of the current directory you are in. Simply entering pwd will return the full current path starting with a forward slash (e.g.: /home/ubuntu).
