@@ -20,8 +20,9 @@ This command is used to upgrade the installed packages on your system to their l
 
 - When using `sudo`, the system will prompt users to authenticate themselves with a password.  
 
-![image](images/image-requesting-password.png)
+![image](images/image-requesting-user-for-password.png)
 
+![image](images/upgrade-done-using-sudo.png)
 ## PWD COMMAND
 `pwd` short for `print working directory`, displays the name of the current directory you are in. Simply entering pwd will return the full current path starting with a forward slash (e.g.: /home/ubuntu).
 The pwd command uses the following syntax:
@@ -66,7 +67,20 @@ ls
 or you can simply specify the path to the folder to want to view its content.
 e.g.:
 ```Bash
-ls /home/user/Documents
+ls ~/Desktop/Darey/DevOps-Projects/Project\ 1
 ```
 ![ls-command](images/ls-command.png)
+
+You can also use this to list all the files in the sub-directories:
+```Bash
+ls -R
+```
+To show hidden files in addition to visible ones:
+```Bash
+ls -a
+```
+To show files in easily readable formats such as MB, GB and TB.
+```Bash
+ls -lh
+```
 
