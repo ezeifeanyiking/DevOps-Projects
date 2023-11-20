@@ -75,12 +75,74 @@ You can also use this to list all the files in the sub-directories:
 ```Bash
 ls -R
 ```
+![list recursively](images/list-recursively.png)
+
 To show hidden files in addition to visible ones:
 ```Bash
 ls -a
 ```
+![list-hidden items](images/list-hidden-items.png)
+
 To show files in easily readable formats such as MB, GB and TB.
 ```Bash
 ls -lh
 ```
+![lists-in-readable-format](images/list-in-readable-format.png)
+
+## CAT COMMAND
+`cat`:- short for `Concatenate` lists, combines, and writes file content to the standard output. To run the command, type cat followed by the file name and its extension. 
+
+```Bash
+cat file.txt
+```
+![cat file](images/cat-command.png)
+
+You can also merge two (2) files and store the output in a third file.
+
+```Bash
+cat file.txt file1.txt > mergedfile.txt
+```
+
+![merge 2 files into 1](images/merge-files-with-cat.png)
+You can see that there is now a third file called `mergedfile.txt` and is has contents from `file.txt` and `file1.txt`.
+
+You can also display the content in reverse order using:
+```Bash
+tac mergedfile.txt
+```
+![tac-command](images/tac-command.png)
+
+## CP COMMAND
+
+`cp` short for `copy` is used to copy files or directories from one location to another.
+The basic syntax is:
+```Bash
+cp [options] source destination
+```
+* source: The file or directory you want to copy
+* destination: Where you want to put the copied file(s) or directory.
+
+
+1.  To copy a file to a different location:
+```Bash
+cp file.txt /path/to/destination/
+```
+![cp-command](images/cp-command.png)
+
+Take note of the command at number 2 in the image above, you can see that after listing the content in Folder2 nothing was returned. You can see that after the cp command we now have file.txt in Folder2 as seen in number 4.
+
+2. Copy a directory and its contents to a different location:
+```Bash
+cp -r directory/ /path/to/destination/
+```
+The -r (or -R) option is used to copy directories recursively.
+![cp directory to directory](images/cp-directory-to-directory.png)
+
+
+
+
+
+
+
+
 
