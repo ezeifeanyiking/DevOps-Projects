@@ -131,12 +131,74 @@ cp file.txt /path/to/destination/
 
 Take note of the command at number 2 in the image above, you can see that after listing the content in Folder2 nothing was returned. You can see that after the cp command we now have file.txt in Folder2 as seen in number 4.
 
-2. Copy a directory and its contents to a different location:
+**Note that:** You can also copy multiple files to a directory using the same format above e.g:
+
+```Bash
+cp file.txt file1.txt /path/to/destination/
+```
+
+
+2. Copy a directory and its contents to a different directory/location:
 ```Bash
 cp -r directory/ /path/to/destination/
 ```
 The -r (or -R) option is used to copy directories recursively.
 ![cp directory to directory](images/cp-directory-to-directory.png)
+
+3. Preserve the original file attributes (timestamps, permissions):
+```Bash
+cp -p file.txt /path/to/destination/
+```
+The -p option preserves the specified attributes.
+
+4. Force copy, overwrite destination if it exists:
+```Bash
+cp -f file.txt /path/to/destination/
+```
+The -f option forces the copy, overwriting the destination if it exists.
+
+5. Interactive copy, prompt before overwriting:
+```Bash
+cp -i file.txt /path/to/destination/
+```
+The -i option prompts for confirmation before overwriting.
+
+6. Copy all files in a directory to another directory:
+```Bash
+cp source_directory/* /path/to/destination/
+```
+This copies all files in source_directory to the specified destination.
+
+## MV COMMAND
+`mv` short for `move` is used to move and rename files and directories.   
+**Note that**: it does not produce an output upon execution. 
+
+`Syntax`:  
+Simply type mv followed by the filename and the destination directory. E.g:
+
+```Bash
+mv file.txt /home/ubuntu/Commands
+```
+
+You can also use the mv command to rename a file. E.g:
+```Bash
+mv file1.txt file2000.txt
+```
+
+## MKDIR COMMAND
+`mkdir` short for `make directory` - is used to create one or multiple directories at once and set permissions for each of them.  
+**Note that**: the user executing this command must have the privilege to make a new folder in the parent directory or they may receive a permission denied error.   
+**Syntax**: 
+```Bash
+mkdir [option] directory_name
+```
+Example:
+1. Create a directory called "Music"
+2. Create a directory called "Songs" inside "Music"
+
+![mkdir-command](images/mkdir-command.png)
+
+
 
 
 
