@@ -198,6 +198,57 @@ Example:
 
 ![mkdir-command](images/mkdir-command.png)
 
+The `mkdir` command support many options such as: -  
+`-p`: short for `parent` - this creates a directory between two existing folders e.g:  
+```Bash
+mkdir -p Music/2020/Songs
+```
+The above command will make the new "2020" directory.  
+`-m`: sets the file permissions.
+For instance; to create a directory with full read, write and execute permissions for all users, enter:
+mkdir -m777 directory_name   
+`-v`: prints a message for each created directory.
+
+## RMDIR COMMAND
+`rmdir` short for `remove directory` - is used to permanently delete an empty directory.  
+**Note that:** to do this the user running this command should have sudo privileges in the parent directory. 
+
+For example: if you want to remove an empty subdirectory named personal1 and its main folder mydir. 
+```Bash
+rmdir Person/personal1
+```
+## RM COMMAND
+This is used to delete files within a directory.
+```Bash
+rm file.txt
+```
+To remove multiple files:
+```Bash
+rm file1.txt file2.txt file3.txt
+```
+![rm-rmdir-command](images/rm-and-rmdir-command.png)
+
+Some acceptable option you can add:  
+`-i`: prompts system confirmation before deleting a file.  
+`-f`: allows the system to remove without a confirmation.  
+`-r`: deletes files and directories recursively.
+
+## TOUCH COMMAND
+This command allows you to create an empty file or generate and modify a timestamp in the Linux Command Line.  
+Lets create an html file named index.html in the Desktop directory.
+```Bash
+touch index.html
+```
+![](images/touch-command.png)
+
+
+## LOCATE COMMAND
+This command is used to search for a file or a directory.   
+Adding the -i argument will turn off case sensitivity, so you can search for files even if you don't remember its exact name. 
+
+
+
+
 
 
 
