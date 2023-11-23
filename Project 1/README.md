@@ -239,7 +239,7 @@ Lets create an html file named index.html in the Desktop directory.
 ```Bash
 touch index.html
 ```
-![](images/touch-command.png)
+![touch-command](images/touch-command.png)
 
 
 ## LOCATE COMMAND
