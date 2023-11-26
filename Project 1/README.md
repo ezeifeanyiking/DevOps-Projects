@@ -957,6 +957,490 @@ man -k keyword
 ```
 This command searches for manual pages containing the specified keyword.
 
+## ECHO COMMAND
+The `echo` command is used to display text or variables to the terminal. It is a simple command that outputs the text or value of a variable to the standard output. The basic syntax of the echo command is:
+```Bash
+echo [options] [text or variables]
+```
+`options`: Various options that modify the behavior of the echo command.   
+`text or variables`: The text or variables whose values you want to display.    
+Here are some common examples of using the echo command:
+1. Display Text:
+
+```Bash
+echo "Hello, World!"
+```
+This command displays the text "Hello, World!" to the terminal.
+
+2. Display Variables:
+
+```Bash
+name="John"
+echo "My name is $name"
+```
+This command defines a variable name with the value "John" and then displays the text "My name is John" using the variable.
+
+3. Display Multiple Lines:
+
+```Bash
+echo -e "Line 1\nLine 2"
+```
+The -e option enables interpretation of backslash escapes, allowing you to display multiple lines.
+
+4. Redirect Output to a File:
+
+```Bash
+echo "Output to file" > output.txt
+```
+This command redirects the output of echo to a file named output.txt.
+
+5. Append to a File:
+
+```Bash
+echo "Append to file" >> output.txt
+```
+The >> operator appends the output to the end of the file.
+
+## ZIP, UNZIP COMMANDS
+The zip and unzip commands are used for creating and extracting ZIP archives, respectively. These commands are commonly used for compressing and decompressing files and directories. Here are some examples of using the zip and unzip commands:
+
+`zip` Command:
+1. Create a ZIP Archive:
+
+```Bash
+zip archive.zip file1.txt file2.txt directory/
+```
+This command creates a ZIP archive named archive.zip containing file1.txt, file2.txt, and the contents of the directory/.
+
+2. Create a ZIP Archive Recursively:
+
+```Bash
+zip -r archive.zip directory/
+```
+The -r option enables recursive compression, including all files and subdirectories in the specified directory.
+
+3. Add Files to an Existing ZIP Archive:
+
+```Bash
+zip archive.zip additionalfile.txt
+```
+This command adds additionalfile.txt to the existing ZIP archive archive.zip.
+
+4. Create a Password-Protected ZIP Archive:
+
+```Bash
+zip -e secured.zip file.txt
+```
+The -e option prompts for a password during compression, creating a password-protected ZIP archive.
+
+`unzip` Command:
+1. Extract Files from a ZIP Archive:
+
+```Bash
+unzip archive.zip
+```
+This command extracts the contents of archive.zip in the current directory.
+
+2. Extract Files to a Specific Directory:
+
+```Bash
+unzip archive.zip -d /path/to/destination
+```
+The -d option specifies the destination directory for extracting files.
+
+3. List Contents of a ZIP Archive:
+
+```Bash
+unzip -l archive.zip
+```
+This command lists the contents of archive.zip without extracting them.
+
+4. Extract Only Specific Files:
+
+```Bash
+unzip archive.zip file1.txt file2.txt
+```
+This command extracts only file1.txt and file2.txt from the ZIP archive.
+
+5. Password-Protected ZIP Archive:
+
+```Bash
+unzip secured.zip
+```
+If the ZIP archive is password-protected, the unzip command prompts for the password.
+
+6. Quiet Mode (Suppress Output):
+
+```Bash
+unzip -q archive.zip
+```
+The -q option suppresses output during extraction.
+
+## HOSTNAME COMMAND
+The `hostname` command is used to display or set the system's hostname. The hostname is the label assigned to a device on a network to uniquely identify it. The basic syntax of the hostname command is:
+```Bash
+hostname [options] [newhostname]
+```
+- `options`: Various options that modify the behavior of the hostname command.
+- `newhostname`: The new hostname to set (if provided).
+
+Here are some common examples of using the hostname command:
+
+1. Display the Current Hostname:
+```Bash
+hostname
+```
+This command displays the current hostname of the system.
+
+2. Display the Fully Qualified Domain Name (FQDN):
+
+```Bash
+hostname -f
+```
+The -f option displays the fully qualified domain name.
+
+3. Set a New Hostname (Temporary):
+
+```Bash
+hostname newhostname
+```
+This command sets a new hostname temporarily for the current session. Once the session ends or the system is rebooted, the hostname returns to its original value.
+
+4. Set a New Hostname (Persistent):
+```Bash
+sudo hostnamectl set-hostname newhostname
+```
+On systems that support systemd, the hostnamectl command can be used to set a new hostname persistently. The change takes effect after a system restart.
+
+5. Display Current Hostname and Related Information:
+
+```Bash
+hostnamectl
+```
+This command displays detailed information about the system hostname, including static and transient information.
+
+6. Set a Transient Hostname (for the Current Session):
+
+```Bash
+sudo hostnamectl set-hostname --transient newhostname
+```
+This command sets a new transient hostname for the current session. It won't persist across reboots.
+
+```Bash
+Set a Static Hostname (for Future Reboots):
+```
+This command sets a new static hostname that will persist across reboots.
+
+
+## USERADD, USERDEL COMMANDS
+The `useradd` and `userdel` commands are used to manage user accounts. These commands are typically used by system administrators to create and delete user accounts on a system.  
+
+`useradd` Command:  
+The useradd command is used to create a new user account on the system. The basic syntax is:
+```Bash
+sudo useradd [options] username
+```
+- `options`: Various options that modify the behavior of the useradd command. 
+- `username`: The username for the new user account.   
+Here are some common examples:
+
+1. Create a New User:
+```Bash
+sudo useradd john
+```
+This command creates a new user account named "john."
+
+2. Create a User with a Home Directory:
+
+```Bash
+sudo useradd -m jane
+```
+The -m option creates a home directory for the user.
+
+3. Specify Home Directory Location:
+
+```Bash
+sudo useradd -m -d /home/customhome bob
+```
+The -d option allows you to specify a custom home directory for the user.
+
+4. Create a User with a Specific User ID (UID):
+
+```Bash
+sudo useradd -u 1001 sam
+```
+The -u option sets the user ID (UID) for the new user.
+
+5. Create a User with Additional Groups:
+
+```Bash
+sudo useradd -G users,staff mary
+```
+The -G option adds the user to additional groups (comma-separated).
+
+`userdel` Command:
+The userdel command is used to delete a user account from the system. The basic syntax is:
+
+```Bash
+sudo userdel [options] username
+```
+- `options`: Various options that modify the behavior of the userdel command.
+- `username`: The username of the user account to delete.
+
+Here are some common examples:
+
+1. Delete a User:
+```Bash
+sudo userdel john
+```
+This command deletes the user account named "john."
+
+2. Delete a User and Home Directory:
+
+```Bash
+sudo userdel -r jane
+```
+The -r option removes the user's home directory and mail spool.
+
+3. Forcefully Delete a User:
+
+```Bash
+sudo userdel -f sam
+```
+The -f option forces the deletion of the user, even if the user is currently logged in.
+
+4. Remove User from Groups:
+
+```Bash
+sudo userdel -G users,staff mary
+```
+The -G option removes the user from additional groups.
+
+## APT-GET COMMAND
+
+The apt-get command is a package management tool that allows users to install, upgrade, and remove software packages on their system. The apt-get command is part of the Advanced Package Tool (APT) suite of tools. Here are some common uses of the apt-get command:
+
+Installing Packages:
+1. Install a Package:
+```Bash
+sudo apt-get install packageName
+```
+This command installs the specified package.
+
+2. Install Multiple Packages:
+
+```Bash
+sudo apt-get install package1 package2
+```
+You can install multiple packages in a single command.
+
+**Updating Package Information:**
+1. Update Package Lists:
+```Bash
+sudo apt-get update
+```
+This command updates the local package lists, downloading information about the latest available packages.
+
+**Upgrading Packages:**
+1. Upgrade Installed Packages:
+```Bash
+sudo apt-get upgrade
+```
+This command upgrades all installed packages to their latest versions.
+
+2. Dist-Upgrade (Distribution Upgrade):
+
+```Bash
+sudo apt-get dist-upgrade
+```
+This command upgrades the distribution by intelligently handling dependencies.
+
+**Removing Packages:**
+1. Remove a Package:
+
+```Bash
+sudo apt-get remove packageName
+```
+This command removes the specified package while keeping its configuration files.
+
+2. Remove Package and Configuration Files:
+
+```Bash
+sudo apt-get purge packageName
+```
+This command removes the specified package along with its configuration files.
+
+**Searching for Packages:**
+```Bash
+apt-get search searchTerm
+```
+This command searches for packages that match the specified search term.
+
+## NANO
+The nano command is a text editor for Unix-like operating systems, including Linux and macOS. It is a simple and user-friendly text editor that operates in the terminal, providing basic text editing capabilities. The basic syntax to use nano is:
+```Bash
+nano [options] [filename]
+```
+- `options`: Various options that modify the behavior of the nano editor.
+- `filename`: The name of the file you want to edit.   
+
+Here are some common examples of using the nano command:
+1. Open or Create a File:
+```Bash
+nano filename.txt
+```
+This command opens the specified file (filename.txt) for editing. If the file doesn't exist, nano will create it.
+
+2. Open a File at a Specific Line:
+
+```Bash
+Open a File at a Specific Line:
+```
+This command opens the file and places the cursor at line 10.
+
+3. Open a File in Read-Only Mode:
+
+```Bash
+nano -v filename.txt
+```
+The -v option opens the file in read-only mode.
+
+4. Search for Text:
+- Press Ctrl + W to initiate a search.
+- Enter the search term and press Enter.
+
+5. Save Changes:
+- Press Ctrl + O to write the changes to the file.
+- Press Enter to confirm the filename.
+
+6. Exit nano
+- Press Ctrl + X to exit nano.
+7. Display Help:
+- Press Ctrl + G to display the help menu.
+
+## VI COMMAND
+The vi command is a text editor. It is a powerful and widely used text editor that operates in the terminal. vi is known for its modal editing, which means it has different modes for inserting text, navigating, and making changes. The basic syntax to use vi is:
+```Bash
+vi [filename]
+```
+- filename: The name of the file you want to edit.
+
+Here are some common examples of using the vi command:
+
+1. Open or Create a File:
+
+```Bash
+vi filename.txt
+```
+This command opens the specified file (filename.txt) for editing. If the file doesn't exist, vi will create it.
+
+
+2. Navigate and Edit in Normal Mode:
+- Press i to enter insert mode, allowing you to insert text.
+- Press Esc to return to normal mode for navigating and making changes.
+3. Save Changes:
+```Bash
+In normal mode, type :w and press Enter to save changes.
+```
+
+4. Save and Quit:
+In normal mode, type :wq and press Enter to save changes and quit.
+
+5. Quit Without Saving:
+- In normal mode, type :q! and press Enter to quit without saving.
+
+6. Open a File at a Specific Line:
+```Bash
+vi +10 filename.txt
+```
+This command opens the file and places the cursor at line 10.
+
+7. Search for Text:
+- In normal mode, type `/` followed by the search term and press Enter.
+
+8. Replace Text:
+- In normal mode, type `:%s/oldtext/newtext/g` to replace all occurrences of oldtext with newtext.
+
+9. Undo Changes:
+- In normal mode, press u to undo the last change.
+
+10. Redo Changes:
+- In normal mode, press Ctrl + R to redo changes.
+
+## SU COMMAND
+The su command, which stands for "substitute user" or "switch user," is used in Unix-like operating systems, including Linux and macOS, to change the user identity and execute commands with the privileges of a different user. The basic syntax of the su command is:
+
+```Bash
+su [options] [username]
+```
+- options: Various options that modify the behavior of the su command.
+- username: The username of the user to switch to. If not specified, the default is often the superuser (root).
+
+Here are some common examples of using the su command:
+
+1. Switch to the Superuser (Root):
+
+```Bash
+su
+```
+This command switches to the superuser account. You'll be prompted to enter the root password.
+
+2. Switch to a Specific User:
+
+```Bash
+su username
+```
+This command switches to the specified user account. You'll be prompted to enter the password for that user.
+
+3. Open a Shell as Another User:
+
+```Bash
+su - username
+```
+The - option opens a new shell with the environment variables and settings of the specified user.
+
+4. Switch to Root with Full Environment:
+
+```Bash
+su -
+```
+This command switches to the root user with a full environment, similar to logging in directly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
