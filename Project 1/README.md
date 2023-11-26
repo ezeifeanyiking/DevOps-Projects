@@ -1406,8 +1406,41 @@ su -
 ```
 This command switches to the root user with a full environment, similar to logging in directly.
 
+## HTOP COMMAND
+The htop command is a powerful and interactive process viewer for Unix-like operating systems, including Linux. It provides a visual representation of system resources, such as CPU, memory, and processes, in a user-friendly and customizable format. htop is an enhanced version of the traditional top command, offering additional features and a more intuitive interface.
 
+Here are some common features and usage examples of the htop command:
 
+1. Install `htop`:
+Before using htop, you may need to install it. On Debian-based systems, you can use the following command:
+
+```Bash
+sudo apt-get install htop
+```
+2. Run htop:
+Simply type htop in the terminal and press Enter to launch the htop interface.         
+3. Navigate in htop:
+Use arrow keys to navigate through the processes.
+Press F1 for help, displaying a list of available commands.
+Press F2 to customize the display settings.   
+4. Sort Processes:
+Press F6 to choose the sorting method (e.g., sort by CPU usage, memory usage).   
+5. Kill a Process:
+Navigate to the process you want to terminate.
+Press F9, then select the signal to send (e.g., SIGTERM for a regular termination).   
+6. Search for a Process:
+
+Press F3 to open the search box, then enter the process name or part of it.    
+7. Filter Processes: 
+Press F4 to open the filter box, then enter criteria to filter processes.   
+8. Display Tree View:       
+Press F5 to toggle the tree view, showing the hierarchical relationship between processes.   
+9. View System Information:
+
+Press F2 to customize the display settings, including showing or hiding specific information.  
+10. Quit htop:
+
+Press F10 to exit htop.
 
 
 
