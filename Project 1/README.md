@@ -1150,6 +1150,8 @@ sudo useradd john
 ```
 This command creates a new user account named "john."
 
+![useradd-userdel-command](images/useradd-userdel-command.png)
+
 2. Create a User with a Home Directory:
 
 ```Bash
@@ -1234,6 +1236,8 @@ sudo apt-get install package1 package2
 ```
 You can install multiple packages in a single command.
 
+![apt-get command](images/sudo-apt-get-command.png)
+
 **Updating Package Information:**
 1. Update Package Lists:
 ```Bash
@@ -1263,6 +1267,8 @@ sudo apt-get remove packageName
 ```
 This command removes the specified package while keeping its configuration files.
 
+![remove-command](images/apt-get remove-command.png)
+
 2. Remove Package and Configuration Files:
 
 ```Bash
@@ -1275,6 +1281,7 @@ This command removes the specified package along with its configuration files.
 apt-get search searchTerm
 ```
 This command searches for packages that match the specified search term.
+
 
 ## NANO
 The nano command is a text editor for Unix-like operating systems, including Linux and macOS. It is a simple and user-friendly text editor that operates in the terminal, providing basic text editing capabilities. The basic syntax to use nano is:
@@ -1406,6 +1413,8 @@ su -
 ```
 This command switches to the root user with a full environment, similar to logging in directly.
 
+![su-command](images/su-command.png)
+
 ## HTOP COMMAND
 The htop command is a powerful and interactive process viewer for Unix-like operating systems, including Linux. It provides a visual representation of system resources, such as CPU, memory, and processes, in a user-friendly and customizable format. htop is an enhanced version of the traditional top command, offering additional features and a more intuitive interface.
 
@@ -1438,6 +1447,8 @@ Press `F5` to toggle the tree view, showing the hierarchical relationship betwee
 Press `F2` to customize the display settings, including showing or hiding specific information.  
 10. Quit `htop`:  
 Press `F10` to exit htop.
+
+![htop-command](https://www.linkedin.com/in/chioma-nwadike/)
 
 ## PS COMMAND
 The ps command in Unix-like operating systems, including Linux and macOS, is used to display information about active processes running on the system.    
@@ -1483,6 +1494,7 @@ ps -ef
 The -e option selects all processes, and the -f option provides a full-format output with additional details.
 
 ![ps--ef-command](images/ps--ef-command.png)
+
 
 
 
