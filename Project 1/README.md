@@ -1440,7 +1440,9 @@ Press `F2` to customize the display settings, including showing or hiding specif
 Press `F10` to exit htop.
 
 ## PS COMMAND
-The ps command in Unix-like operating systems, including Linux and macOS, is used to display information about active processes running on the system. It provides a snapshot of the current processes, showing details such as process IDs (PIDs), status, resource usage, and more. The basic syntax of the ps command is:
+The ps command in Unix-like operating systems, including Linux and macOS, is used to display information about active processes running on the system.    
+It provides a snapshot of the current processes, showing details such as: process IDs (PIDs), the type of terminal (TTY), the running time (TIME) and the command that launches the process (CMD). The static results are taken from the virtual files in the /proc file system.    
+The basic syntax of the ps command is:
 ```Bash
 ps [options]
 ```
@@ -1453,12 +1455,16 @@ ps
 ```
 This command displays a list of processes for the current user in a compact format.
 
+![ps-command](images/ps-command.png)
+
 2. List All Processes for All Users:
 
 ```Bash
 ps aux
 ```
 The aux options display a more detailed list of all processes for all users.
+
+![ps-aux-command](images/ps-aux-command.png)
 
 3. Show Process Tree (Hierarchy):
 
@@ -1467,6 +1473,8 @@ ps auxf
 ```
 The f option displays a tree-like structure, showing the parent-child relationship between processes.
 
+![ps-aux-command](images/ps-auxf-command.png)
+
 4. Display Full Format:
 
 ```Bash
@@ -1474,6 +1482,7 @@ ps -ef
 ```
 The -e option selects all processes, and the -f option provides a full-format output with additional details.
 
+![ps--ef-command](images/ps--ef-command.png)
 
 
 
