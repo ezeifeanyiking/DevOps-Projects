@@ -319,6 +319,7 @@ If you add the -i option, it makes the search case-insensitive:
 ```Bash
 locate -i filename
 ```
+![locate-command](images/locate-command.png)
 
 ## FIND COMMAND
 
@@ -394,6 +395,7 @@ df [options] [file system(s)]
 ```Bash
 df
 ```
+![df-command](images/df-command.png)
 
 This command displays information about disk space usage for all mounted file systems.
 
@@ -430,6 +432,7 @@ Here are some common examples of using the du command:
 ```Bash
 du /path/to/directory
 ```
+![du-command](images/du-command.png)
 
 This command displays the disk space usage for the specified directory.
 
