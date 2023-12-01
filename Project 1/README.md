@@ -705,6 +705,8 @@ kill -l
 ```
 This command lists the available signals and their corresponding numbers.
 
+![kill-command](images/kill-command.png)
+
 ## PING COMMAND
 The ping command is used for checking whether a network or a server is reachable. In addition, it is used to troubleshoot various connectivity issues. 
 
@@ -720,6 +722,8 @@ Here are some common examples of using the ping command:
 ping google.com
 ```
 This is used to know if you can connect to google and measure its response time.
+
+![ping-command](images/ping-command.png)
 
 ## WGET COMMAND
 The wget command is a powerful utility used for downloading files from the internet in Unix-like operating systems, including Linux and macOS. It supports both HTTP, HTTPS and FTP protocols and can retrieve files from web servers and FTP servers. The basic syntax of the wget command is:
@@ -754,6 +758,8 @@ This command runs wget in the background.
 wget http://example.com/file1.txt http://example.com/file2.txt
 ```
 You can specify multiple URLs to download.
+
+![wget-command](images/wget-command.png)
 
 ## UNAME COMMAND
 The uname command is used to display system information. The name "`uname`" stands for "`Unix name`." The basic syntax of the uname command is:
@@ -816,6 +822,8 @@ uname -a
 ```
 This command displays all available information, including system name, node name, kernel release, kernel version, machine hardware name, and processor type.
 
+![uname-command](images/uname-command.png)
+
 ## TOP COMMAND
 The top command in Unix-like operating systems, including Linux and macOS, is a real-time system monitoring tool that provides an interactive, dynamic view of system resource usage. It displays a list of processes and their resource utilization, including CPU, memory, and swap usage. The top command continuously updates the information on the screen, allowing you to monitor system performance in real time.
 
@@ -828,6 +836,8 @@ Open a terminal and simply type:
 top
 ```
 This will launch the top command, displaying a real-time view of system information.
+
+![top-command](images/top-command.png)
 
 2. Interact with the top Interface:
 
@@ -926,6 +936,8 @@ history -a
 ```
 This command appends the current session's commands to the history file.
 
+![history-command](images/history-command.png)
+
 
 ## MAN COMMAND
 The man command in Unix-like operating systems is used to display the manual pages (documentation) for various commands, utilities, and system functions. The name "man" stands for "manual." The basic syntax of the man command is:
@@ -956,6 +968,7 @@ Search for a Keyword Within the Manual Page:
 man -k keyword
 ```
 This command searches for manual pages containing the specified keyword.
+![man-command](images/man-command.png)
 
 ## ECHO COMMAND
 The `echo` command is used to display text or variables to the terminal. It is a simple command that outputs the text or value of a variable to the standard output. The basic syntax of the echo command is:
@@ -1000,6 +1013,8 @@ This command redirects the output of echo to a file named output.txt.
 echo "Append to file" >> output.txt
 ```
 The >> operator appends the output to the end of the file.
+
+![echo-command](images/echo-command.png)
 
 ## ZIP, UNZIP COMMANDS
 The zip and unzip commands are used for creating and extracting ZIP archives, respectively. These commands are commonly used for compressing and decompressing files and directories. Here are some examples of using the zip and unzip commands:
@@ -1076,6 +1091,8 @@ unzip -q archive.zip
 ```
 The -q option suppresses output during extraction.
 
+![zip-unzip-command](images/zip-unzip-commands.png)
+
 ## HOSTNAME COMMAND
 The `hostname` command is used to display or set the system's hostname. The hostname is the label assigned to a device on a network to uniquely identify it. The basic syntax of the hostname command is:
 ```Bash
@@ -1118,6 +1135,8 @@ On systems that support systemd, the hostnamectl command can be used to set a ne
 hostnamectl
 ```
 This command displays detailed information about the system hostname, including static and transient information.
+
+![hostname-command](images/useradd-userdel-command.png)
 
 6. Set a Transient Hostname (for the Current Session):
 
