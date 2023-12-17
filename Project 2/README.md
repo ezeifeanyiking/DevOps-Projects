@@ -38,6 +38,97 @@ This will initialize a new git repository within your current directory. You can
 ```Bash
 ls -a
 ```
+![git init command](images/git-init-command.png)
 
 
+## Making your first commit
+`Commit` is more or less like saving the changes you made to your files. Changes can be `adding`, `modifying`, or `deleting` files or text.   
+When you make a commit, git takes a snapshot of the current state of your repository and saves a copy in the `.git` folder.   
+Now let's make our first commit. To do so follow these steps:
 
+
+- Inside your working directory create a file called index.txt using this command: 
+```Bash
+touch index.txt
+```
+- Write any sentence of your choice inside the text file. Afterwards save your changes.
+- Add your changes to git staging area using this command:
+```Bash
+git add .
+```
+- To commit your changes to git, run the commnd:
+```Bash
+git commit -m "Adding an Index File"
+```
+The -m flag is used to provide a message. The commit message is a nice way of providing context about the commit. When writing a commit message, make it descriptive as possible. Let it explain why the commit was made.
+![git commit command](images/git-commit-command.png)
+
+## Working with Branches
+Git allows us to work on multiple projects simultaneously without messing up our main codebase.   
+Imagine you have a note book and you want to write different stories on different pages of your note book so that you do not mess up your previous note.    
+Git branch is commonly used to develop new feature of your application. You will agree with me that the initial code is untested and as such can not be added to the code base of your live project.   
+Git branch is also an important tool for collaboration within remote teams (developers working from different locations). They can make seperate branches while working on same feature. And at the end of the day, converge their code to one branch.
+
+### Make your first git branch
+To make a new branch run this command: 
+```Bash
+git checkout -b 
+```
+The -b flag helps you create and change into the new branch.   
+With that said let's make our first branch following these steps:   
+- Make a new branch by running this command:
+```Bash 
+git checkout -b my-new-branch
+```
+![git branch command](images/git-branch-command.png) 
+
+## List your git Branches
+Use the command below to list the branches on your local git repository:
+```Bash
+git branch
+```
+![git branch command](images/git-branch-command.png) 
+
+## Change into an old branch
+To change into an old or existing branch use the command below:
+```Bash
+git checkout <branch-name>
+```
+![git checkout command](images/git-checkout-command.png)
+
+## Merging a branch into another branch
+Let's say we have two branches "main" and "my-new-branch". And we want to add the content of branch "my-new-branch" into "main". First we change into branch "main" and run the git command below:
+```Bash
+git merge my-new-branch
+```
+![git merge command](images/git-merge-command.png)
+
+## Deleting a git branch
+When new feature is added to an application, its often done in a feature branch. Usually this feature branch is deleted when the code must have been tested and merged into a staging or dev environment depending on the branch strategy of the team.   
+Git branch can be deleted with the command below:   
+```Bash
+git branch -d <branch_name>
+```
+## Collaboration and Remote Repositories
+GitHub is a web based platform where git repositories are hosted. This way, it becomes available in the public internet(it is possible to create private repository and limit who has access to the repo). Remote Teams can now view, update and make changes in the same repository.
+
+Follow the below steps to create your repository:
+
+1. First create a gitHub account via this link https://github.com/
+2. Enter your email, password, username.
+3. Click on Verify button to verify your identity
+4. Click on create and enter the activation code sent to your email on the textboxes.
+5. Select number of Users and github plans and click on continue for free.
+6. Click on the plus sign at the top right corner of your github account to create a new Repository, then fill out the forms and add the README.md (tick the box) and click on create.
+7. Add a remote repository to your local repository by running:
+```Bash
+ git remote add origin <link to github repo>
+```
+8. After making changes, you can commit back to the Github repository by running: 
+```Bash
+git push
+```
+9. You can clone remote Git repo by running: 
+```Bash
+git clone <link to remote repo>
+```
