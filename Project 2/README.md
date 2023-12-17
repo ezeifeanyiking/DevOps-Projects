@@ -132,3 +132,79 @@ git push
 ```Bash
 git clone <link to remote repo>
 ```
+
+## **Branch Management and Tagging**
+
+### **Introduction to Markdown Syntax**
+Markdown syntax is used for formatting plain text. It allows you to add formatting elements to your texts without using complex HTML or orther formatting languages. It is commonly used for creating documents, README.md files etc.
+Examples:
+1. **Headings**: to create heading, the number of hash symbol determines the level of heading.
+```console
+# Heading 1 
+## Heading 2 
+### Heading 3
+```
+Output:
+# Heading 1
+## Heading 2
+### Heading 3
+
+
+2. **Emphasis**
+```console
+*italic* or _italic_
+**bold** or __bold__
+```
+Output: 
+
+*italic* or _italic_
+**bold** or __bold__
+
+3. Lists: support ordered and unordered lists.
+```console
+- Item 1
+- Item 2
+- Item 3
+1. First item
+2. Second item
+3. Third item
+
+
+```
+Output:
+- Item 1
+- Item 2
+- Item 3
+1. First item
+2. Second item
+3. Third item
+
+
+
+4. Links: to create hyperlinks, use square brackets.
+```console
+[visit darey.io](https://www.darey.io)
+```
+Output:
+[visit darey.io](https://www.darey.io)
+
+
+5. Images: use exclamation mark followed by brackets for alt text and parentheses containing the image URL.
+
+```console
+![Alt Text](https://example.com/image.jpg)
+```
+
+
+
+6. Code: use backticks
+```console
+`console.log('Welcome to darey.io')`
+```
+Output:
+`console.log('Welcome to darey.io')`
+
+
+Here is a link for more insight on https://learn.microsoft.com/en-us/contribute/content/markdown-reference 
+
+Thank you.
